@@ -41,5 +41,6 @@ end
 start_btc = get_btc_cost('20/01/2017')
 end_btc = get_btc_cost('26/06/2017')
 
+p (total / pairs.length)
 p (total / pairs.length) * (end_btc / start_btc)
 p end_btc / start_btc

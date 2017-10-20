@@ -12,7 +12,7 @@ url = 'https://poloniex.com/public?command=returnChartData'
 
 start = 2.years.ago.to_i
 stop = DateTime.now.to_time.to_i
-period = 5.minutes.to_i.to_s
+period = 4.hours.to_i.to_s
 
 pairs.each do |pair|
 	full_url = "#{url}&currencyPair=#{pair}&start=#{start}&end=#{stop}&period=#{period}"
