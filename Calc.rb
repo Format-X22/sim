@@ -6,7 +6,7 @@ require_relative 'Pairs'
 Mongoid.load!('./mongoid.yml', :development)
 
 
-period = 5.minutes
+period = 1.day
 skip = 1.months
 percent = 97.0
 wait_origin = 7.days / period
@@ -15,16 +15,23 @@ total = 0.0
 pairs.each do |pair|
 	Tick.collection = "#{pair}_#{period.to_i.to_s}"
 
-	data = Tick.skip(skip / period).only(:open, :close, :low, :high).to_a.last(3.month / period)
+	#data = Tick.skip(skip / period).only(:open, :close, :low, :high).to_a.last(3.month / period)
+	data = Tick
+			   .where(
+				   :date.gte => DateTime.parse('20/01/2017').to_time.to_i,
+				   :date.lte => DateTime.parse('26/06/2017').to_time.to_i
+			   )
+			   .only(:open, :close, :low, :high)
+			   .to_a
 
-	profit = 100
+	profit = 100.0
 	state = 'buy'
-	wait = 0
-	buy = 0
+	wait = 0.0
+	buy = 0.0
 	low = Float::INFINITY
 
 	data.each_with_index do |tick, index|
-		next if tick.open < 0.00000500
+		#next if tick.open < 0.00000500
 
 		last = data[index - 1]
 		low ||= tick.low

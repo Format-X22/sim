@@ -1,79 +1,79 @@
 def pairs
 	data = []
 
-	data += add_suffix_to_pairs 'BTC', %w[
-		AMP
-		ARDR
-		BCH
+	data += add_suffix_to_pairs 'BTC', [
+		'AMP',
+		'ARDR',
+		#'BCH',
 
-		BCY
-		BELA
-		BLK
-		BTCD
-		BTM
+		'BCY',
+		'BELA',
+		'BLK',
+		'BTCD',
+		'BTM',
 		
-		BURST
+		'BURST',
 
-		CVC
+		#'CVC',
 		
-		DCR
-		DGB
+		'DCR',
+		'DGB',
 
-		EMC2
+		'EMC2',
 
 
-		EXP
+		'EXP',
 		
-		FLDC
-		FLO
-		GAME
+		'FLDC',
+		'FLO',
+		'GAME',
 
-		GNO
-		GNT
-		GRC
-		HUC
-		LBC
-		LSK
+		'GNO',
+		'GNT',
+		'GRC',
+		'HUC',
+		'LBC',
+		'LSK',
 
 
-		NAUT
-		NAV
-		NEOS
+		'NAUT',
+		'NAV',
+		'NEOS',
 		
-		NOTE
-		NXC
-		NXT
+		'NOTE',
+		'NXC',
+		'NXT',
 
-		OMNI
+		'OMNI',
 		
-		PINK
-		POT
+		'PINK',
+		'POT',
 		
-		RADS
-		REP
-		RIC
+		'RADS',
+		'REP',
+		'RIC',
 		
-		SC
-		SJCX
-		STEEM
+		'SC',
+		'SJCX',
+		'STEEM',
 		
-		STRAT
-		SYS
-		VIA
-		VRC
-		VTC
-		XBC
-		XCP
-		XEM
+		'STRAT',
+		'SYS',
+		'VIA',
+		'VRC',
+		'VTC',
+		'XBC',
+		'XCP',
+		'XEM',
 
-		XPM
+		'XPM',
 
-		XVC
+		'XVC',
 
-		ZRX
+		#'ZRX'
 	]
-
-	add_suffix_to_pairs 'ETH', %w[
+=begin
+	add_suffix_to_pairs 'ETH', [
 		BCH
 		CVC
 		ETC
@@ -88,7 +88,7 @@ def pairs
 		ZRX
 	]
 
-	add_suffix_to_pairs 'XMR', %w[
+	add_suffix_to_pairs 'XMR', [
 		NXT
 		DASH
 		LTC
@@ -99,7 +99,7 @@ def pairs
 		MAID
 	]
 
-	add_suffix_to_pairs 'USDT', %w[
+	add_suffix_to_pairs 'USDT', [
 		BTC
 		ETH
 		BCH
@@ -113,7 +113,7 @@ def pairs
 		NXT
 		REP
 	]
-
+=end
 	data
 end
 
